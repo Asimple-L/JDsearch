@@ -1,0 +1,49 @@
+<app-leader></app-leader>
+<div class="container">
+  <div class="mc">
+    <div class="rate">
+      <div class="FL">
+        <div class="Goodrate">
+          <strong>{{ anaylse.rate.GoodRate | percent }}</strong>
+          <br/>
+          <span>好评度</span>
+        </div>
+      </div>
+      <div class="percent FL">
+        <dl>
+          <dt>
+            <span>好评({{ anaylse.rate.GoodRate | percent }})</span>
+          </dt>
+          <dd>
+            <div [style.width]="anaylse.rate.GoodRate | percent "></div>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <span>中评({{ anaylse.rate.GeneralRate | percent }})</span>
+          </dt>
+          <dd>
+            <div [style.width]="anaylse.rate.GeneralRate | percent "></div>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <span>差评({{ anaylse.rate.PoorRate | percent }})</span>
+          </dt>
+          <dd>
+            <div [style.width]="anaylse.rate.PoorRate | percent "></div>
+          </dd>
+        </dl>
+      </div>
+      <!-- 标签云 -->
+      <div class="actor-new" id="tagbox">
+        <h4>买家反应</h4>
+        <span *ngFor="let info of yun ">{{ info }}</span>
+      </div>
+    </div>
+  </div>
+  <div echarts [options]="DatMap" class="demo-chart"></div>
+  <div echarts [options]="SizeMap" class="demo-chart"></div>
+  <div echarts [options]="Radar" class="demo-chart"></div>
+  <div echarts [options]="ColorMap" class="demo-chart"></div>
+</div>

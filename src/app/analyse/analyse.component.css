@@ -1,0 +1,64 @@
+.FL {
+  float: left;
+}
+.Clear{
+  clear: both;
+}
+.demo-chart {
+  height: 400px;
+}
+.rate {
+  color: #666;
+  font-family: arial;
+  text-align: center;
+}
+.Goodrate strong {
+  font: 400 46px/30px arial;
+  color: #e4393c;
+}
+.Goodrate {
+  padding-top: 35px;
+}
+.percent dd {
+  float: left;
+  width: 100px;
+  height: 10px;
+  margin-top: 6px;
+  overflow: hidden;
+  background: #efefef;
+}
+.percent dd div {
+  overflow: hidden;
+  height: 10px;
+  width: 0;
+  background-color: #e4393c;
+}
+.percent dl {
+  padding: 2px 0;
+  overflow: hidden;
+  zoom: 1;
+}
+.percent dt {
+  float: left;
+  width: 80px;
+  color: #999;
+}
+#tagbox h4 {
+
+}
+#tagbox span {
+  border: 1px solid #ebebeb;
+  padding: 2px 7px;
+  color: #959595;
+  line-height: 1.5em;
+  display: inline-block;
+  margin: 0 7px 7px 0;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#tagbox span:hover {
+  color: #ffffff;
+  background: #74adaa;
+  border: 1px solid #74adaa;
+}

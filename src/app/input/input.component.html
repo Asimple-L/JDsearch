@@ -1,0 +1,13 @@
+<div class="input-info">
+  <div class="logo center">
+    <h1 class="text-center" style="color: #38f">京东商品爬取系统</h1>
+  </div>
+  <div class="col-lg-12">
+    <div class="input-group">
+      <input type="search" class="form-control" placeholder="输入关键字" [(ngModel)]="Info">
+      <span class="input-group-btn">
+          <a class="btn btn-default" type="submit" [routerLink]="['/show/p',Info]">开始爬取</a>
+        </span>
+    </div>
+  </div>
+</div>

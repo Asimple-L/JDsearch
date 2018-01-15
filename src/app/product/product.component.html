@@ -1,0 +1,63 @@
+<app-leader></app-leader>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+      <tr>
+        <th class="col-lg-2">商品名称</th>
+        <th class="col-lg-6">简介</th>
+        <th class="col-lg-1">价格</th>
+        <th class="col-lg-1">商品链接</th>
+        <th class="col-lg-1">商品分析</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of productInfos">
+        <th scope="row">{{ product.item_name }}</th>
+        <td>{{ product.introduction }}</td>
+        <td>￥{{ product.item_price }}</td>
+        <!--<td>{{ product.src }}</td>-->
+        <td><a [href]="product.src" class="btn btn-info">点击进入商品链接</a></td>
+        <!--<td>{{ product.src }}</td>-->
+        <td><a [routerLink]="['/show/c']" [queryParams]="{'name': info, 'ProductID': product.item_id }" class="btn btn-info">点击进入商品分析</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <nav aria-label="Page navigation page-info" style="margin-left: 15%;cursor: pointer">
+    <ul class="pagination">
+      <li>
+        <a (click)="changeProPage('pre')" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a (click)="changeProPage('1')">1</a></li>
+      <li><a (click)="changeProPage('2')">2</a></li>
+      <li><a (click)="changeProPage('3')">3</a></li>
+      <li><a (click)="changeProPage('4')">4</a></li>
+      <li><a (click)="changeProPage('5')">5</a></li>
+      <li><a (click)="changeProPage('6')">6</a></li>
+      <li><a (click)="changeProPage('7')">7</a></li>
+      <li><a (click)="changeProPage('8')">8</a></li>
+      <li><a (click)="changeProPage('9')">9</a></li>
+      <li><a (click)="changeProPage('10')">10</a></li>
+      <li><a (click)="changeProPage('11')">11</a></li>
+      <li><a (click)="changeProPage('12')">12</a></li>
+      <li><a (click)="changeProPage('13')">13</a></li>
+      <li><a (click)="changeProPage('14')">14</a></li>
+      <li><a (click)="changeProPage('15')">15</a></li>
+      <li><a (click)="changeProPage('16')">16</a></li>
+      <li><a (click)="changeProPage('17')">17</a></li>
+      <li><a (click)="changeProPage('18')">18</a></li>
+      <li><a (click)="changeProPage('19')">19</a></li>
+      <li><a (click)="changeProPage('20')">20</a></li>
+      <li>
+        <a (click)="changeProPage('next')" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
